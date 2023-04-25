@@ -1,5 +1,3 @@
-import java.util.PriorityQueue;
-
 class Solution {
     public int[] getSubarrayBeauty(int[] nums, int k, int x) {
         int n = nums.length;
