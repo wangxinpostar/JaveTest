@@ -3,15 +3,27 @@ package LuoGu;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Scanner;
+import java.util.TreeSet;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        // BufferedReader bufferedReader = new BufferedReader(new
-        // InputStreamReader(System.in));
-        // int[] a = new int[5];
-        // int[] b = new int[5];
-        // String[] s = bufferedReader.readLine().split(":");
+        HashMap<Integer, String> hashMap = new HashMap<>();
+        hashMap.put(1, "zhangsan");
+        hashMap.put(2, "lisi");
+        TreeSet<Integer> treeSet = new TreeSet<>(Collections.reverseOrder());
+        treeSet.add(1);
+        treeSet.add(6);
+        treeSet.add(2);
+        treeSet.forEach(x -> System.out.println(x));
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        int[] a = new int[5];
+        int[] b = new int[5];
+        String[] s = bufferedReader.readLine().split(":");
         // for (int i = 0; i < s.length; i++) {
         // a[i] = Integer.parseInt(s[i]);
         // }

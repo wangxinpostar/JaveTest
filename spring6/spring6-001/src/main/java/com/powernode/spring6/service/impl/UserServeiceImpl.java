@@ -4,7 +4,7 @@ import com.powernode.spring6.dao.UserDao;
 import com.powernode.spring6.dao.impl.UserDaoImplForMySQL;
 import com.powernode.spring6.service.UseService;
 
-public class UserServeiceUmpl implements UseService {
+public class UserServeiceImpl implements UseService {
     private UserDao userDao = new UserDaoImplForMySQL();
 
     @Override
