@@ -1,25 +1,24 @@
 package com.powernode.bank.pojo;
 
-import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+
 import java.io.Serializable;
 
 /**
- * 
  * @TableName t_act
  */
-@TableName(value ="t_act")
+@TableName(value = "t_act")
 public class Account implements Serializable {
     /**
-     * 
+     *
      */
     @TableId
     private String actno;
 
     /**
-     * 
+     *
      */
     private Double balance;
 
@@ -27,28 +26,28 @@ public class Account implements Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 
+     *
      */
     public String getActno() {
         return actno;
     }
 
     /**
-     * 
+     *
      */
     public void setActno(String actno) {
         this.actno = actno;
     }
 
     /**
-     * 
+     *
      */
     public Double getBalance() {
         return balance;
     }
 
     /**
-     * 
+     *
      */
     public void setBalance(Double balance) {
         this.balance = balance;
@@ -67,7 +66,7 @@ public class Account implements Serializable {
         }
         Account other = (Account) that;
         return (this.getActno() == null ? other.getActno() == null : this.getActno().equals(other.getActno()))
-            && (this.getBalance() == null ? other.getBalance() == null : this.getBalance().equals(other.getBalance()));
+                && (this.getBalance() == null ? other.getBalance() == null : this.getBalance().equals(other.getBalance()));
     }
 
     @Override

@@ -1,25 +1,35 @@
 package com.powernode.controller.pojo;
 
-import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import org.springframework.stereotype.Repository;
+
 import java.io.Serializable;
 
 /**
- * 
  * @TableName t_student
  */
-@TableName(value ="t_student")
+@TableName(value = "t_student")
+@Repository
 public class Student implements Serializable {
+
+    public Student() {
+    }
+
+    public Student(String name, Integer age) {
+        this.name = name;
+        this.age = age;
+    }
+
     /**
-     * 
+     *
      */
     @TableId
     private String name;
 
     /**
-     * 
+     *
      */
     private Integer age;
 
@@ -27,28 +37,28 @@ public class Student implements Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 
+     *
      */
     public String getName() {
         return name;
     }
 
     /**
-     * 
+     *
      */
     public void setName(String name) {
         this.name = name;
     }
 
     /**
-     * 
+     *
      */
     public Integer getAge() {
         return age;
     }
 
     /**
-     * 
+     *
      */
     public void setAge(Integer age) {
         this.age = age;
@@ -67,7 +77,7 @@ public class Student implements Serializable {
         }
         Student other = (Student) that;
         return (this.getName() == null ? other.getName() == null : this.getName().equals(other.getName()))
-            && (this.getAge() == null ? other.getAge() == null : this.getAge().equals(other.getAge()));
+                && (this.getAge() == null ? other.getAge() == null : this.getAge().equals(other.getAge()));
     }
 
     @Override
