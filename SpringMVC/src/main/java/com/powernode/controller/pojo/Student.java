@@ -1,4 +1,4 @@
-package com.powernode.bank.pojo;
+package com.powernode.controller.pojo;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
@@ -8,20 +8,20 @@ import java.io.Serializable;
 
 /**
  * 
- * @TableName t_act
+ * @TableName t_student
  */
-@TableName(value ="t_act")
-public class Account implements Serializable {
+@TableName(value ="t_student")
+public class Student implements Serializable {
     /**
      * 
      */
     @TableId
-    private String actno;
+    private String name;
 
     /**
      * 
      */
-    private Double balance;
+    private Integer age;
 
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;
@@ -29,29 +29,29 @@ public class Account implements Serializable {
     /**
      * 
      */
-    public String getActno() {
-        return actno;
+    public String getName() {
+        return name;
     }
 
     /**
      * 
      */
-    public void setActno(String actno) {
-        this.actno = actno;
+    public void setName(String name) {
+        this.name = name;
     }
 
     /**
      * 
      */
-    public Double getBalance() {
-        return balance;
+    public Integer getAge() {
+        return age;
     }
 
     /**
      * 
      */
-    public void setBalance(Double balance) {
-        this.balance = balance;
+    public void setAge(Integer age) {
+        this.age = age;
     }
 
     @Override
@@ -65,17 +65,17 @@ public class Account implements Serializable {
         if (getClass() != that.getClass()) {
             return false;
         }
-        Account other = (Account) that;
-        return (this.getActno() == null ? other.getActno() == null : this.getActno().equals(other.getActno()))
-            && (this.getBalance() == null ? other.getBalance() == null : this.getBalance().equals(other.getBalance()));
+        Student other = (Student) that;
+        return (this.getName() == null ? other.getName() == null : this.getName().equals(other.getName()))
+            && (this.getAge() == null ? other.getAge() == null : this.getAge().equals(other.getAge()));
     }
 
     @Override
     public int hashCode() {
         final int prime = 31;
         int result = 1;
-        result = prime * result + ((getActno() == null) ? 0 : getActno().hashCode());
-        result = prime * result + ((getBalance() == null) ? 0 : getBalance().hashCode());
+        result = prime * result + ((getName() == null) ? 0 : getName().hashCode());
+        result = prime * result + ((getAge() == null) ? 0 : getAge().hashCode());
         return result;
     }
 
@@ -85,8 +85,8 @@ public class Account implements Serializable {
         sb.append(getClass().getSimpleName());
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
-        sb.append(", actno=").append(actno);
-        sb.append(", balance=").append(balance);
+        sb.append(", name=").append(name);
+        sb.append(", age=").append(age);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
         return sb.toString();
