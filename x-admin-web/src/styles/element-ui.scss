@@ -10,6 +10,40 @@
   cursor: pointer;
 }
 
+.el-dropdown-menu__item--divided:before {
+  content: '';
+  display: block;
+  margin: 0 -20px;
+  background-color: #000000;
+}
+
+.el-dropdown-menu__item {
+  list-style: none;
+  line-height: 36px;
+  padding: 0 20px;
+  margin: 0;
+  font-size: 14px;
+  color: #c0c0c0;
+  cursor: pointer;
+  outline: 0;
+}
+
+.el-dropdown-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  margin: 5px 0;
+  background-color: #000000;
+  border-radius: 4px;
+}
+
+.el-dropdown-menu__item:focus,
+.el-dropdown-menu__item:not(.is-disabled):hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
 .el-upload {
   input[type="file"] {
     display: none !important;
