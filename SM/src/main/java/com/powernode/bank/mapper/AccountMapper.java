@@ -2,6 +2,7 @@ package com.powernode.bank.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.powernode.bank.pojo.Account;
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Component;
 
@@ -14,7 +15,9 @@ import java.util.List;
  * @Entity com.powernode.bank.pojo.Account
  */
 @Component
+@Mapper
 public interface AccountMapper extends BaseMapper<Account> {
+
     List<Account> selectAll();
 
     Account selectByActno(@Param("actno") String actno);

@@ -23,6 +23,10 @@ public class AccountServiceImpl extends ServiceImpl<AccountMapper, Account>
     @Autowired
     private AccountMapper accountMapper;
 
+    @Override
+    public List<Account> list() {
+        return super.list();
+    }
 
     @Override
     public boolean save(Account act) {
