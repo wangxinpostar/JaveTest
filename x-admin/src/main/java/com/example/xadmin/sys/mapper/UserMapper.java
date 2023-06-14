@@ -1,7 +1,9 @@
 package com.example.xadmin.sys.mapper;
 
-import com.example.xadmin.sys.entity.User;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.example.xadmin.sys.entity.User;
+
+import java.util.List;
 
 /**
  * @author wangx
@@ -10,7 +12,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * @Entity com.example.xadmin.sys.pojo.User
  */
 public interface UserMapper extends BaseMapper<User> {
-
+    public List<String> getRoleNameByuserId(Integer userId);
 }
 
 

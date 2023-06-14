@@ -1,9 +1,5 @@
 package com.example.xadmin.sys.controller;
 
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.example.xadmin.sys.entity.UserRole;
-import com.example.xadmin.sys.mapper.UserRoleMapper;
-import com.example.xadmin.sys.service.UserRoleService;
 import org.springframework.stereotype.Service;
 
 /**
@@ -12,8 +8,7 @@ import org.springframework.stereotype.Service;
  * @createDate 2023-06-14 10:41:30
  */
 @Service
-public class UserRoleServiceImpl extends ServiceImpl<UserRoleMapper, UserRole>
-        implements UserRoleService {
+public class UserRoleController {
 
 }
 
