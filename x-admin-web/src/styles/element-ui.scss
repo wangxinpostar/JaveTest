@@ -38,6 +38,19 @@
   border-radius: 4px;
 }
 
+.el-button--primary:focus,
+.el-button--primary:hover {
+  background: #343434;
+  border-color: #767676;
+  color: #929292;
+}
+
+.el-button {
+  background-color: black;
+  border-color: #000000;
+  color: aliceblue;
+}
+
 .el-dropdown-menu__item:focus,
 .el-dropdown-menu__item:not(.is-disabled):hover {
   background-color: #000000;
@@ -84,4 +97,95 @@
 // to fix el-date-picker css style
 .el-range-separator {
   box-sizing: content-box;
+}
+
+.el-input {
+  width: 200px;
+  margin-right: 20px;
+}
+
+.el-card {
+  margin-bottom: 10px;
+}
+
+.el-pager li.active {
+  color: #000000;
+  cursor: default;
+}
+
+.el-pager li:hover {
+  color: #000000;
+}
+
+.el-pagination button:hover {
+  color: #000000;
+}
+
+.el-pagination button {
+  white-space: nowrap;
+  padding: 5px 10px;
+  color: #9a9a9a;
+  font-weight: 700;
+}
+
+.el-pagination button:disabled {
+  color: #d8d8d8;
+  cursor: not-allowed;
+}
+
+.el-dialog,
+.el-pager li {
+  -webkit-box-sizing: border-box;
+}
+
+.el-pager li {
+  color: #9a9a9a;
+  padding: 0 4px;
+  font-size: 15px;
+  min-width: 35.5px;
+  height: 28px;
+  line-height: 28px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.el-pager li.btn-quicknext,
+.el-pager li.btn-quickprev {
+  line-height: 28px;
+  color: #9a9a9a;
+}
+
+.el-pagination .btn-next,
+.el-pagination .btn-prev {
+  background-size: 16px;
+  cursor: pointer;
+  margin: 0;
+  color: #9a9a9a;
+}
+
+.el-input__inner {
+  -webkit-appearance: none;
+  background-color: #f6f6f6;
+  background-image: none;
+  border-radius: 4px;
+  border: 1px solid #9a9a9a;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #000000;
+  display: inline-block;
+  font-size: inherit;
+  height: 40px;
+  line-height: 40px;
+  outline: 0;
+  padding: 0 15px;
+  -webkit-transition: border-color .2s cubic-bezier(.645, .045, .355, 1);
+  transition: border-color .2s cubic-bezier(.645, .045, .355, 1);
+  width: 100%;
+}
+
+.el-input.is-active .el-input__inner,
+.el-input__inner:focus {
+  border-color: #000000;
+  outline: 0;
 }
